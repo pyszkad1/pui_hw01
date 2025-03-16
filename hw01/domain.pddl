@@ -35,7 +35,7 @@
                     (at ?g1 ?from)
                     (at ?g2 ?from)
                     (not (= ?g1 ?g2))
-                    (holding ?g1 ?t)
+                    (or (holding ?g1 ?t) (holding ?g2 ?t))
                     (connected ?from ?to)
                     (slower ?g1 ?g2))
     :effect (and
@@ -52,7 +52,7 @@
                     (at ?g1 ?from)
                     (at ?g2 ?from)
                     (not (= ?g1 ?g2))
-                    (holding ?g2 ?t)
+                    (or (holding ?g1 ?t) (holding ?g2 ?t))
                     (connected ?from ?to)
                     (slower ?g2 ?g1))
     :effect (and
